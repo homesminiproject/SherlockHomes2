@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+
+<div layout:fragment="content" class="content">
+
+
+<div
+        class="hero page-inner overlay"
+        style="background-image: url('/images/hero_bg_1.jpg')"
+>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+                <h1 class="heading" data-aos="fade-up">문의하기</h1>
+
+                <nav
+                        aria-label="breadcrumb"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                >
+                    <ol class="breadcrumb text-center justify-content-center">
+                        <li class="breadcrumb-item"><a href="../index.html">메인화면</a></li>
+                        <li class="breadcrumb-item"><a href="Inquiry.html">문의내역</a></li>
+                        <li
+                                class="breadcrumb-item active text-white-50"
+                                aria-current="page"
+                        >
+                            문의하기
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div
+                    class="col-lg-3 mb-5 mb-lg-0"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+            >
+                <div class="contact-info">
+                    <div class="address mt-2 mb-5">
+                        <a href="/Faq/FaQ">
+                            <i class="icon-question"></i>
+                            <h4>자주 묻는 질문</h4>
+                        </a>
+                    </div>
+                    <div class="open-hours mt-4 mb-5">
+                        <a href="/Notice/Notice">
+                            <i class="icon-bullhorn"></i>
+                            <h4>공지사항</h4>
+                        </a>
+                    </div>
+                    <div class="email mt-4 mb-5">
+                        <a href="/Faq/Inquiry">
+                            <i class="icon-pencil"></i>
+                            <h4>문의내역</h4>
+                        </a>
+                    </div>
+                    <div class="email mt-4 mb-5">
+                        <a href="/Reports/Report">
+                            <i class="icon-warning"></i>
+                            <h4>신고내역</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="mb-4">셜록홈즈에 궁금하신 점을 문의해 주세요<br>문의내용과 답변은 '문의내역'에서 확인하실 수 있습니다.</h4>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <select class="form-select form-select-lg" aria-label="문의 유형">
+                                <option selected>문의유형 선택</option>
+                                <option value="1">서비스 이용문의</option>
+                                <option value="2">허위매물 신고</option>
+                                <option value="3">기타 문의</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="날짜 자동 삽입"
+                                    readonly
+                            />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="제목"
+                            />
+                        </div>
+                        <div class="col-12 mb-3">
+                  <textarea
+                          name=""
+                          id=""
+                          cols="30"
+                          rows="7"
+                          class="form-control"
+                          placeholder="문의내용"
+                  ></textarea>
+                        </div>
+
+                        <div class="col-6">
+                            <input
+                                    type="submit"
+                                    value="수정하기"
+                                    class="btn btn-primary"
+                            />
+                        </div>
+                        <div class="col-6">
+                            <input
+                                    type="submit"
+                                    value="삭제하기"
+                                    class="btn btn-primary"
+                            />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.untree_co-section -->
+
+</div>
+
+</html>

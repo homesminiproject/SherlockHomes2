@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- xmlns:sec 권한별로 html을 다르게 설정하기 위해서 -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<div class="wrap" th:fragment="header">
+    <div> <!-- 공통영역을 설정, header라는 이름으로 공통영역으로 사용할 것이다. -->
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close">
+                    <span class="icofont-close js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+        <nav class="site-nav">
+            <div class="container">
+                <div class="menu-bg-wrap">
+                    <div class="site-navigation">
+                        <a href="/" class="logo m-0 float-start">셜록홈즈</a>
+
+                        <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu">
+                            <li><a href="/Maps/Apt">아파트</a></li>
+                            <li><a href="/Maps/Officetel">오피스텔</a></li>
+                            <li><a href="/Maps/Villa">빌라</a></li>
+                        </ul>
+
+                        <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+                            <li class="has-children">
+                                <a href="#">내 정보</a>
+                                <ul class="dropdown">
+                                    <li><a href="/Users/Favorite">관심매물</a></li>
+                                    <li><a href="/Faq/Inquiry">문의하기</a></li>
+                                    <li><a href="/Users/UserUpdate">정보 수정</a></li>
+                                    <li><a href="/Users/Logout">로그아웃</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <a
+                                href="#"
+                                class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+                                data-toggle="collapse"
+                                data-target="#main-navbar"
+                        >
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+    </div>
+</div>
+</html>

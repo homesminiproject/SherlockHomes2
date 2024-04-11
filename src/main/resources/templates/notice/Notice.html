@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+
+<div layout:fragment="content" class="content">
+
+
+
+
+<div
+        class="hero page-inner overlay"
+        style="background-image: url('/images/hero_bg_1.jpg')"
+>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+                <h1 class="heading" data-aos="fade-up">공지사항</h1>
+
+                <nav
+                        aria-label="breadcrumb"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                >
+                    <ol class="breadcrumb text-center justify-content-center">
+                        <li class="breadcrumb-item"><a href="/">메인화면</a></li>
+                        <li
+                                class="breadcrumb-item active text-white-50"
+                                aria-current="page"
+                        >
+                            공지사항
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div
+                    class="col-lg-3 mb-5 mb-lg-0"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+            >
+                <div class="contact-info">
+                    <div class="address mt-2 mb-5">
+                        <a href="/Faq/FaQ">
+                            <i class="icon-question"></i>
+                            <h4>자주 묻는 질문</h4>
+                        </a>
+                    </div>
+                    <div class="open-hours mt-4 mb-5">
+                        <a href="/Notice/Notice">
+                            <i class="icon-bullhorn"></i>
+                            <h4>공지사항</h4>
+                        </a>
+                    </div>
+                    <div class="email mt-4 mb-5">
+                        <a href="/Faq/Inquiry">
+                            <i class="icon-pencil"></i>
+                            <h4>문의내역</h4>
+                        </a>
+                    </div>
+                    <div class="email mt-4 mb-5">
+                        <a href="/Reports/Report">
+                            <i class="icon-warning"></i>
+                            <h4>신고내역</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                <form action="#">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="col-1">번호</th>
+                            <th scope="col" class="col-7">제목</th>
+                            <th scope="col" class="col-2">날짜</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="col-1">1</th>
+                            <td class="col-7">개인정보 처리방침 개정 안내</td>
+                            <td class="col-2">2024-01-01</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="col-1">2</th>
+                            <td class="col-7">서비스 이용약관 신설 안내</td>
+                            <td class="col-2">2023-01-01</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.untree_co-section -->
+
+</div>
+
+</html>

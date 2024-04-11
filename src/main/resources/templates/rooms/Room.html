@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+
+
+<head>
+    <script>
+      window.addEventListener('scroll', function() {
+    var agentBox = document.querySelector('.agent-box');
+    var section = document.querySelector('.section');
+    var sectionTop = section.offsetTop;
+    var sectionBottom = sectionTop + section.offsetHeight - agentBox.offsetHeight;
+    var originalWidth = agentBox.offsetWidth; // 고정 전 원래 너비
+
+    if (window.scrollY >= sectionTop && window.scrollY <= sectionBottom) {
+        agentBox.style.position = 'fixed';
+        agentBox.style.top = '0';
+        agentBox.style.width = originalWidth + 'px'; // 고정된 상태에서 원래 너비로 설정
+    } else {
+        agentBox.style.position = 'static'; // 스크롤 이전 상태로 복원
+        agentBox.style.width = 'auto'; // 기본 너비로 설정
+    }
+});
+    </script>
+  </head>
+<div layout:fragment="content" class="content">
+
+
+    <div
+      class="hero page-inner overlay"
+      style="background-image: url('../../images/hero_bg_3.jpg')"
+    >
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-9 text-center mt-5">
+            <h1 class="heading" data-aos="fade-up">
+              5232 California AVE. 21BC
+            </h1>
+
+            <nav
+              aria-label="breadcrumb"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <ol class="breadcrumb text-center justify-content-center">
+                <li class="breadcrumb-item"><a href="../index.html">메인화면</a></li>
+                <li class="breadcrumb-item">
+                  <a href="../properties.html">매물</a>
+                </li>
+                <li
+                  class="breadcrumb-item active text-white-50"
+                  aria-current="page"
+                >
+                   아파트
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="img-property-slide-wrap">
+              <div class="img-property-slide">
+                <img src="../../images/img_1.jpg" alt="Image" class="img-fluid" />
+                <img src="../../images/img_2.jpg" alt="Image" class="img-fluid" />
+                <img src="../../images/img_3.jpg" alt="Image" class="img-fluid" />
+              </div>
+            </div>
+
+            <div class="detail">
+              <h3>가격정보</h3>
+            <table class="table table-borderless">
+              <tbody>
+              <tr>
+                <th scope="col">매매</th>
+                <td>4억</td>
+              </tr>
+              <tr>
+                <th scope="row">보증금/월세</th>
+                <td>5000/50</td>
+              </tr>
+              <tr>
+                <th scope="row">관리비</th>
+                <td>5만원</td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="detail">
+              <h3>상세정보</h3>
+            <table class="table table-borderless">
+              <tbody>
+              <tr>
+                <th scope="col">방종류</th>
+                <td>원룸</td>
+              </tr>
+              <tr>
+                <th scope="row">해당층/건물층</th>
+                <td>1층/10층</td>
+              </tr>
+              <tr>
+                <th scope="row">전용/공급면적</th>
+                <td>47.8㎡/60㎡</td>
+              </tr>
+              <tr>
+                <th scope="row">방 수/욕실 수</th>
+                <td>1개/1개</td>
+              </tr>
+              <tr>
+                <th scope="row">주차가능여부</th>
+                <td>1대 가능</td>
+              </tr>
+              <tr>
+                <th scope="row">건물증축일</th>
+                <td>2018-01-01</td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+
+            <div class="detail">
+              <h3>옵션</h3>
+              <table class="table table-borderless">
+                <tbody>
+                <tr>
+                  <td>에어컨</td>
+                  <td>세탁기</td>
+                  <td>냉장고</td>
+                  <td>엘리베이터</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="detail">
+              <h3>위치</h3>
+              kakao map 사용
+            </div>
+          </div>
+
+          <!-- 사이드탭 -->
+          <div class="col-lg-4">
+            <div class="d-block agent-box p-4">
+              <div class="text">
+                <h2 class="mb-0">월세 5000/30</h2>
+                <div class="meta mb-3">매물번호 : 111111</div>
+                <ul class="list-unstyled d-flex">
+                  <li class="me-1 col-5">
+                    <span class="icon-home"> 아파트</span>
+                  </li>
+                  <li class="me-1 col-5">
+                    <span class="icon-crop"> 15.62㎡</span>
+                  </li>
+                </ul>
+                <ul class="list-unstyled d-flex">
+                  <li class="me-1 col-5">
+                    <span class="icon-sort-amount-asc"> 2층/10층</span>
+                  </li>
+                  <li class="me-1 col-5">
+                    <span class="icon-credit-card"> 5만원</span>
+                  </li>
+                </ul>
+                <ul class="list-unstyled d-flex">
+                  <li class="me-1 col-10">
+                    <span class="icon-map"> 서울시 강남구 역삼동 111-11</span>
+                  </li>
+                </ul>
+                <hr class="mt-4">
+                <h3 class="mt-4">강남공인중개사</h3>
+                <ul class="list-unstyled d-flex mt-4">
+                  <li class="col-6">
+                    <input
+                            type="submit"
+                            value="연락하기"
+                            class="btn btn-primary"
+                    />
+                  </li>
+                  <li class="col-4">
+                    <input
+                            type="submit"
+                            value="♡ 찜하기"
+                            class="btn btn-right"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+</html>
